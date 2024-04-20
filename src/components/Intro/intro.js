@@ -17,7 +17,7 @@ import email from '../../data/Mail-logo.jpeg';
 
 const Intro = () => {
   return (
-    <div>
+    <div id='intro123'>
     <section id='intro' className='app'>
 
         <div className='introContent'>
@@ -216,7 +216,7 @@ const Intro = () => {
      
         <div className="list">
           <span className="h2">Shailka Systems</span>
-          <div className="h3"><br />
+          <div><br />
            <a href="https://www.linkedin.com/company/shailka-systems/"><img src={linkedin} alt="LinkedIn" className='link' /></a>
            <a href="https://x.com/ShailkaSystems"><img src={twitter} alt="Twitter" className='link' /></a>
            <a href="https://www.instagram.com"><img src={instagram} alt="Instagram" className='link' /></a>

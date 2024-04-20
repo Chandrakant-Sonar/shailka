@@ -92,6 +92,7 @@ const About = () => {
    </div>
  <div className="list">
    <span className="h3">   Get Involved</span><br /><br />
+  
    <span className="h4">Contact Us</span><br />
    <span className="h4">Partner with us</span><br />
    <span className="h4">Privacy Policy</span><br />

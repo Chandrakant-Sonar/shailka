@@ -19,19 +19,27 @@
     height: auto;
    
   }
+  .getintouch {
+    height: 3rem;
+    width: 10rem;
+    border: 2px solid black;
+    border-radius: 5%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 3rem;
+    margin-left: 1rem;
+  }
+  
 
-.getintouch{
-  height: 3rem;
-  width: 10rem;
-  border: 2px solid black;
-  border-radius: 5%;
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  border-radius: 3rem;
-  margin-left: 1rem;
+  .link {
+    margin: 0.5rem;
+    width: 30px; /* Adjust as needed */
+    height: auto;
+  }
+  
 
-}
+
 .stepimg{
   
     height: 50vh;
@@ -307,6 +315,7 @@
       padding: 2rem 2rem;
       display:table-column;
       justify-content: center;
+    
      
   
   }
@@ -321,3 +330,4 @@
     height: auto;
    
   }
+  

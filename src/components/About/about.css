@@ -17,7 +17,7 @@
     height: 60vh;
     width: 100vw;
     padding: 2rem;
-    background-color: white;
+    
  
     display: flex;
     flex-direction: column;
@@ -118,15 +118,20 @@ color: white;
 
 }
 .footer{
-    width: 100%; 
-    /* max-width: 100%; */
-    height: 1.5rem;
-    background: rgb(120,120,120);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-    font-size: small;
+  
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(120, 120, 120);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+        font-size: small;
+        z-index: 999; /* Ensure the footer stays above other content */
+   
+      
 }
 
 
@@ -153,7 +158,7 @@ color: white;
   background-size:cover;
   background-position: cover;
   height: auto;
-  z-index: -1;
+  /* z-index: -1; */
   position: relative;
   height: auto;
  

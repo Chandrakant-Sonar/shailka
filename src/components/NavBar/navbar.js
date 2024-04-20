@@ -7,7 +7,7 @@ const Navbar = ({ handleClick }) => {
   return (
    <nav className='navbar'>
     <img src={logo} alt="logo" className='logo'/>
-    
+   
     <div className='desktopmenu'>
         <Link onClick={() => handleClick('intro')} className='desktopMenuListItems'>Home</Link>
         <Link onClick={() => handleClick('about')} className='desktopMenuListItems'>About US</Link>
