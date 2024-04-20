@@ -1,0 +1,173 @@
+#apply{
+    min-height: calc(100vh-4rem);
+    width: 100vw;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.h1{
+    font-size: 3rem;
+    margin-bottom: 1 rem;
+    color: black;
+}
+.clientsetails{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.clientImages{
+    margin: 1rem 0;
+    display: flex;
+
+
+}
+.clientImage{
+    object-fit: cover;
+    width: 23%;
+    min-width: 9rem;
+    margin: auto;
+    padding: 0.25rem;
+
+}
+#clients{
+    padding: 2rem;
+}
+.contactdetails{
+    padding: 1rem;
+    font-size: medium;
+    font-weight: 300;
+
+}
+.contactform{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vm;
+    max-width: 60rem;
+}
+.aa{
+    margin-left: 1.5rem;
+    text-align: left;
+}
+.name,.email,.msg{
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(40,40,40);
+}
+.submit{
+    background: white;
+    border: none;
+  
+    margin: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.75rem 3.5rem;
+}
+.links{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.link{
+    object-fit: cover;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.25rem;
+    margin: 0 0.75rem;
+}
+#Contact{
+    background-color: white;
+    color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+     /* justify-content: center;  */
+}
+.name1{
+    width: 100%;
+   margin: 1px;
+    display: flex;
+    flex-direction: column;
+}
+.contact1{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 3rem 1rem 3rem 1rem;
+}
+.form{
+    width: 75%;
+    height: auto;
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center; */
+}
+.footer{
+    width: 100%; 
+    /* max-width: 100%; */
+    height: 1.5rem;
+    background: rgb(120,120,120);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: small;
+}
+
+
+.footermenu{
+  display: flex;
+  width: 100%;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-content: center;  
+
+ 
+}
+.list{
+    width: 35%;
+    padding: 2rem 2rem;
+    display:table-column;
+    justify-content: center;
+   
+
+}
+.app {
+    width: 99%;
+    background-image: url('../../data/cta-bg.webp');
+    background-size:cover;
+    background-position: cover;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    height: auto;
+   
+  
+  }.h3{
+    color: black;
+  font-size: 2rem;
+     padding: 1rem 0.5rem;
+     font-weight: 400;
+  }
+  
+  .h4{
+     color: black;
+  font-size: 1rem;
+     line-height: 2rem;
+     padding: 2rem 1rem;
+     font-weight: 200;
+  
+  
+  }

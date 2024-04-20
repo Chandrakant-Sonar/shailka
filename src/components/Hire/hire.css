@@ -1,0 +1,89 @@
+#hire{
+
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../data/group-266.webp');
+    background-size: cover;
+    background-position: cover;
+    height: 100vh;
+    /* z-index: -1;  */
+    position: relative;
+}
+.h1{
+    font-size: 3rem;
+    margin-bottom: 1 rem;
+    color: black;
+}
+.clientsetails{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.clientImages{
+    margin: 1rem 0;
+    display: flex;
+
+
+}
+.clientImage{
+    object-fit: cover;
+    width: 23%;
+    min-width: 9rem;
+    margin: auto;
+    padding: 0.25rem;
+
+}
+#clients{
+    padding: 2rem;
+}
+.contactdetails{
+    padding: 1rem;
+    font-size: medium;
+    font-weight: 300;
+
+}
+.contactform{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vm;
+    max-width: 60rem;
+}
+.name,.email,.msg{
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(40,40,40);
+}
+.submit1 {
+    border: 1px solid black;
+    background-color:darkslateblue;
+    font: bold;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2.5rem;
+    color: aliceblue;
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.link{
+    object-fit: cover;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.25rem;
+    margin: 0 0.75rem;
+}

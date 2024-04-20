@@ -1,0 +1,197 @@
+
+.introContent{
+    height: 60vh;
+    width: 100%;
+    /* padding: 2rem; */
+
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+   
+    margin-left: 10rem;
+}
+
+.introContent1{
+    height: 60vh;
+    width: 100vw;
+    padding: 2rem;
+    
+ 
+    display: flex;
+    flex-direction: column;
+    /* justify-content: right; */
+    align-items:flex-end;
+}
+
+.button{
+    height: 3rem;
+    width: 10rem;
+    
+    color: white;
+    text-align: center;
+    background-color: black;
+    border: 2px solid yellow ;
+    border-radius: 3rem; 
+
+
+    
+}
+.bg{
+    position: absolute;
+    z-index: -1;
+   
+    /* top: 1rem; */
+    object-fit: cover;
+    height: 65vh;
+    width: auto;
+    
+}
+.fimg{
+    position: absolute;
+    z-index: -1;
+   
+    /* top: 1rem; */
+    object-fit: cover;
+    height: 65vh;
+    width: 100%;
+    
+}
+.banner{
+    position: absolute;
+    z-index: -1;
+   
+    /* top: 1rem; */
+    object-fit: cover;
+    height: 65vh;
+    width: 100%;
+    
+}
+.app {
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    
+    overflow: hidden;
+   
+    height: auto;
+    position: relative;
+    height: auto;
+   
+  }
+.h1{
+    color: white;
+    font-size: 3.5rem;
+    font-weight:700 ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+
+.h2{
+color: black;
+    font-size: 2.5rem;
+    font-weight:700 ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}.h22{
+    color: white;
+        font-size: 2.5rem;
+        font-weight:700 ;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    }
+.h3{
+color: white;
+    font-size: 1.5rem;
+    font-weight:500 ;
+    
+  
+    width: 100vm;
+    /* max-width: 75rem; */
+
+}
+.h44{
+color: white;
+    font-size: 1.5rem;
+    font-weight:300 ;
+
+}
+.footer{
+    width: 100%; 
+    /* max-width: 100%; */
+    height: 1.5rem;
+    background: rgb(120,120,120);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: small;
+}
+
+
+.footermenu{
+  display: flex;
+  width: 100%;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-content: center;  
+
+ 
+}
+.list{
+    width: 35%;
+    padding: 2rem 2rem;
+    display:table-column;
+    justify-content: center;
+   
+
+}
+.app1 {
+  width: 100%;
+  /* background-image: url('../../data/cta-bg.webp'); */
+  background-size:cover;
+  background-position: cover;
+  height: auto;
+  z-index: -1;
+  position: relative;
+  height: auto;
+ 
+
+}
+.vision{
+    width: 100%;
+    size: cover;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* .vision1{
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+
+} */
+.why{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    width: 100%;
+
+}
+#intro1{
+
+    height: calc(100vh-4rem);
+    width: 100%;
+    max-width: 100vw;
+   
+    overflow: hidden;
+    position: relative;
+ 
+
+}

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/cropped-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Web site created using create-react-app">
+    <title>Shailka</title>
+    <link rel="stylesheet" href="./Shailka_files/style.css">
+  <script defer="" src="./Shailka_files/bundle.js.download"></script><style>.navbar{
+    background-color: rgb(30, 30, 30);
+    height: 3rem;
+    max-width: 100vw;
+    margin: auto;
+    padding: 2rem 6rem;
+    display: flex;
+    align-items: center;
+    position:sticky;
+    top: 0;
+    justify-content: space-between;
+    z-index: 1;
+    background-image: url(http://localhost:3000/static/media/cta-bg.dc498e0e3a8a00f24aec.webp);
+    background-size: cover;
+    background-position: cover;
+    height:3rem;
+    z-index: 1;
+    /* position: absolute; */
+    
+    
+}
+
+.logo{
+
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+}
+
+.desktopMenuListItems{
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.desktopMenuListItems:hover{
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid yellow;
+    margin: 1rem;
+    cursor: pointer;
+}
+.active{
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid yellow;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL05hdkJhci9uYXZiYXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksaUNBQWlDO0lBQ2pDLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLGVBQWU7SUFDZixNQUFNO0lBQ04sOEJBQThCO0lBQzlCLFVBQVU7SUFDVix5REFBK0M7SUFDL0Msc0JBQXNCO0lBQ3RCLDBCQUEwQjtJQUMxQixXQUFXO0lBQ1gsVUFBVTtJQUNWLHdCQUF3Qjs7O0FBRzVCOztBQUVBOztJQUVJLGlCQUFpQjtJQUNqQixZQUFZO0lBQ1osV0FBVztBQUNmOztBQUVBO0lBQ0ksWUFBWTtJQUNaLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLCtCQUErQjtJQUMvQixZQUFZO0lBQ1osZUFBZTtBQUNuQjtBQUNBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtJQUN0QiwrQkFBK0I7QUFDbkMiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2YmFye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDMwLCAzMCwgMzApO1xyXG4gICAgaGVpZ2h0OiAzcmVtO1xyXG4gICAgbWF4LXdpZHRoOiAxMDB2dztcclxuICAgIG1hcmdpbjogYXV0bztcclxuICAgIHBhZGRpbmc6IDJyZW0gNnJlbTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgcG9zaXRpb246c3RpY2t5O1xyXG4gICAgdG9wOiAwO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgei1pbmRleDogMTtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vZGF0YS9jdGEtYmcud2VicCcpO1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNvdmVyO1xyXG4gICAgaGVpZ2h0OjNyZW07XHJcbiAgICB6LWluZGV4OiAxO1xyXG4gICAgLyogcG9zaXRpb246IGFic29sdXRlOyAqL1xyXG4gICAgXHJcbiAgICBcclxufVxyXG5cclxuLmxvZ297XHJcblxyXG4gICAgb2JqZWN0LWZpdDogY292ZXI7XHJcbiAgICBoZWlnaHQ6IDNyZW07XHJcbiAgICB3aWR0aDogM3JlbTtcclxufVxyXG5cclxuLmRlc2t0b3BNZW51TGlzdEl0ZW1ze1xyXG4gICAgbWFyZ2luOiAxcmVtO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4uZGVza3RvcE1lbnVMaXN0SXRlbXM6aG92ZXJ7XHJcbiAgICBjb2xvcjogeWVsbG93O1xyXG4gICAgcGFkZGluZy1ib3R0b206IDAuNXJlbTtcclxuICAgIGJvcmRlci1ib3R0b206IDNweCBzb2xpZCB5ZWxsb3c7XHJcbiAgICBtYXJnaW46IDFyZW07XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuLmFjdGl2ZXtcclxuICAgIGNvbG9yOiB5ZWxsb3c7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMC41cmVtO1xyXG4gICAgYm9yZGVyLWJvdHRvbTogM3B4IHNvbGlkIHllbGxvdztcclxufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.app {
+    background-image: url(http://localhost:3000/static/media/cta-bg.dc498e0e3a8a00f24aec.webp);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+  
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kseURBQTJEO0lBQzNELHNCQUFzQjtJQUN0QiwyQkFBMkI7SUFDM0IsYUFBYTtJQUNiLFdBQVc7SUFDWCxrQkFBa0I7O0FBRXRCIiwic291cmNlc0NvbnRlbnQiOlsiLmFwcCB7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uL3NoYWlsa2Evc3JjL2RhdGEvY3RhLWJnLndlYnAnKTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG4gICAgei1pbmRleDogLTE7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgXHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>#intro{
+
+    height: calc(100vh-4rem);
+    width: 100vm;
+    max-width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+}
+.app {
+    background-image: url(http://localhost:3000/static/media/cta-bg.dc498e0e3a8a00f24aec.webp);
+    background-size: cover;
+    background-position: cover;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+  
+}
+
+.introContent{
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-weight: 700;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bg{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 1rem;
+    object-fit: cover;
+    height: 80vh;
+    
+}
+.glb{
+    position: absolute;
+    z-index: -2;
+    right:14;
+    top:auto;
+    padding-left: -2rem;
+    object-fit: fill;
+    height: 6vh;
+    width: -moz-fit-content;
+    width: fit-content;
+    
+}
+.h1{
+
+    font-size: 3.5rem;
+    font-weight:700 ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+.h1:hover{
+    color: yellow;
+    font-weight: 800;
+}
+.h2{
+
+    font-size: 2.5rem;
+    font-weight:700 ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+.h3{
+
+    font-size: 1.5rem;
+    font-weight:500 ;
+    height: calc(100vh-4rem);
+    width: 100vm;
+    max-width: 75rem;
+   
+    overflow: hidden;
+    position: relative;
+
+}
+
+.introtext{
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.about{
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.button{
+    height: 2rem;
+    width: 8rem;
+    
+    color: white;
+    text-align: center;
+    background-color: cornflowerblue;
+    border: 2px solid yellow    ; 
+    
+}
+.image{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    object-fit:contain;
+    padding: 3rem;
+    width: 10vw;
+    height: 10vh;
+}
+@media  screen and (max-width:840px) {
+    .bg {
+        right: auto;
+    }
+
+    .introContent{
+        font-size: auto;
+    }
+    .h2{
+        font-size: 2.5rem;
+
+    }
+    .h1{
+        font-size:3.5rem;
+    }
+
+    .h3{
+        font-size: 1.5rem;
+    }
+
+}
+@media  screen and (max-width:480px) {
+    .bg {
+        right: auto;
+    }
+
+
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0ludHJvL2ludHJvLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSx3QkFBd0I7SUFDeEIsWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGtCQUFrQjs7QUFFdEI7QUFDQTtJQUNJLHlEQUErQztJQUMvQyxzQkFBc0I7SUFDdEIsMEJBQTBCO0lBQzFCLGFBQWE7SUFDYixXQUFXO0lBQ1gsa0JBQWtCOztBQUV0Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixZQUFZO0lBQ1osYUFBYTtJQUNiLGdCQUFnQjs7SUFFaEIsYUFBYTtJQUNiLHNCQUFzQjtJQUN0Qix1QkFBdUI7QUFDM0I7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsUUFBUTtJQUNSLFNBQVM7SUFDVCxpQkFBaUI7SUFDakIsWUFBWTs7QUFFaEI7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsUUFBUTtJQUNSLFFBQVE7SUFDUixtQkFBbUI7SUFDbkIsZ0JBQWdCO0lBQ2hCLFdBQVc7SUFDWCx1QkFBa0I7SUFBbEIsa0JBQWtCOztBQUV0QjtBQUNBOztJQUVJLGlCQUFpQjtJQUNqQixnQkFBZ0I7SUFDaEIseURBQXlEO0FBQzdEO0FBQ0E7SUFDSSxhQUFhO0lBQ2IsZ0JBQWdCO0FBQ3BCO0FBQ0E7O0lBRUksaUJBQWlCO0lBQ2pCLGdCQUFnQjtJQUNoQix5REFBeUQ7QUFDN0Q7QUFDQTs7SUFFSSxpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLHdCQUF3QjtJQUN4QixZQUFZO0lBQ1osZ0JBQWdCOztJQUVoQixnQkFBZ0I7SUFDaEIsa0JBQWtCOztBQUV0Qjs7QUFFQTtJQUNJLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsbUJBQW1CO0lBQ25CLDREQUE0RDs7QUFFaEU7O0FBRUE7O0lBRUksaUJBQWlCO0lBQ2pCLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0ksWUFBWTtJQUNaLFdBQVc7O0lBRVgsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixnQ0FBZ0M7SUFDaEMsNEJBQTRCOztBQUVoQztBQUNBO0lBQ0kscUJBQXFCO0lBQ3JCLGFBQWE7SUFDYixzQkFBc0I7SUFDdEIsa0JBQWtCO0lBQ2xCLGFBQWE7SUFDYixXQUFXO0lBQ1gsWUFBWTtBQUNoQjtBQUNBO0lBQ0k7UUFDSSxXQUFXO0lBQ2Y7O0lBRUE7UUFDSSxlQUFlO0lBQ25CO0lBQ0E7UUFDSSxpQkFBaUI7O0lBRXJCO0lBQ0E7UUFDSSxnQkFBZ0I7SUFDcEI7O0lBRUE7UUFDSSxpQkFBaUI7SUFDckI7O0FBRUo7QUFDQTtJQUNJO1FBQ0ksV0FBVztJQUNmOzs7QUFHSiIsInNvdXJjZXNDb250ZW50IjpbIiNpbnRyb3tcclxuXHJcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmgtNHJlbSk7XHJcbiAgICB3aWR0aDogMTAwdm07XHJcbiAgICBtYXgtd2lkdGg6IDEwMHZ3O1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG5cclxufVxyXG4uYXBwIHtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vZGF0YS9jdGEtYmcud2VicCcpO1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNvdmVyO1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxuICAgIHotaW5kZXg6IC0xO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIFxyXG59XHJcblxyXG4uaW50cm9Db250ZW50e1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxuICAgIHdpZHRoOiAxMDB2dztcclxuICAgIHBhZGRpbmc6IDJyZW07XHJcbiAgICBmb250LXdlaWdodDogNzAwO1xyXG4gXHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5iZ3tcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHotaW5kZXg6IC0xO1xyXG4gICAgcmlnaHQ6IDA7XHJcbiAgICB0b3A6IDFyZW07XHJcbiAgICBvYmplY3QtZml0OiBjb3ZlcjtcclxuICAgIGhlaWdodDogODB2aDtcclxuICAgIFxyXG59XHJcbi5nbGJ7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB6LWluZGV4OiAtMjtcclxuICAgIHJpZ2h0OjE0O1xyXG4gICAgdG9wOmF1dG87XHJcbiAgICBwYWRkaW5nLWxlZnQ6IC0ycmVtO1xyXG4gICAgb2JqZWN0LWZpdDogZmlsbDtcclxuICAgIGhlaWdodDogNnZoO1xyXG4gICAgd2lkdGg6IGZpdC1jb250ZW50O1xyXG4gICAgXHJcbn1cclxuLmgxe1xyXG5cclxuICAgIGZvbnQtc2l6ZTogMy41cmVtO1xyXG4gICAgZm9udC13ZWlnaHQ6NzAwIDtcclxuICAgIGZvbnQtZmFtaWx5OiBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udDtcclxufVxyXG4uaDE6aG92ZXJ7XHJcbiAgICBjb2xvcjogeWVsbG93O1xyXG4gICAgZm9udC13ZWlnaHQ6IDgwMDtcclxufVxyXG4uaDJ7XHJcblxyXG4gICAgZm9udC1zaXplOiAyLjVyZW07XHJcbiAgICBmb250LXdlaWdodDo3MDAgO1xyXG4gICAgZm9udC1mYW1pbHk6IHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250O1xyXG59XHJcbi5oM3tcclxuXHJcbiAgICBmb250LXNpemU6IDEuNXJlbTtcclxuICAgIGZvbnQtd2VpZ2h0OjUwMCA7XHJcbiAgICBoZWlnaHQ6IGNhbGMoMTAwdmgtNHJlbSk7XHJcbiAgICB3aWR0aDogMTAwdm07XHJcbiAgICBtYXgtd2lkdGg6IDc1cmVtO1xyXG4gICBcclxuICAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcblxyXG59XHJcblxyXG4uaW50cm90ZXh0e1xyXG4gICAgZm9udC1zaXplOiAxcmVtO1xyXG4gICAgZm9udC13ZWlnaHQ6IDMwMDtcclxuICAgIGxpbmUtaGVpZ2h0OiBub3JtYWw7XHJcbiAgICBmb250LWZhbWlseTogJ1NlZ29lIFVJJywgVGFob21hLCBHZW5ldmEsIFZlcmRhbmEsIHNhbnMtc2VyaWY7XHJcblxyXG59XHJcblxyXG4uYWJvdXR7XHJcblxyXG4gICAgbWFyZ2luLWxlZnQ6IDVyZW07XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDVyZW07XHJcbn1cclxuLmJ1dHRvbntcclxuICAgIGhlaWdodDogMnJlbTtcclxuICAgIHdpZHRoOiA4cmVtO1xyXG4gICAgXHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBjb3JuZmxvd2VyYmx1ZTtcclxuICAgIGJvcmRlcjogMnB4IHNvbGlkIHllbGxvdyAgICA7IFxyXG4gICAgXHJcbn1cclxuLmltYWdle1xyXG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBvYmplY3QtZml0OmNvbnRhaW47XHJcbiAgICBwYWRkaW5nOiAzcmVtO1xyXG4gICAgd2lkdGg6IDEwdnc7XHJcbiAgICBoZWlnaHQ6IDEwdmg7XHJcbn1cclxuQG1lZGlhICBzY3JlZW4gYW5kIChtYXgtd2lkdGg6ODQwcHgpIHtcclxuICAgIC5iZyB7XHJcbiAgICAgICAgcmlnaHQ6IGF1dG87XHJcbiAgICB9XHJcblxyXG4gICAgLmludHJvQ29udGVudHtcclxuICAgICAgICBmb250LXNpemU6IGF1dG87XHJcbiAgICB9XHJcbiAgICAuaDJ7XHJcbiAgICAgICAgZm9udC1zaXplOiAyLjVyZW07XHJcblxyXG4gICAgfVxyXG4gICAgLmgxe1xyXG4gICAgICAgIGZvbnQtc2l6ZTozLjVyZW07XHJcbiAgICB9XHJcblxyXG4gICAgLmgze1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMS41cmVtO1xyXG4gICAgfVxyXG5cclxufVxyXG5AbWVkaWEgIHNjcmVlbiBhbmQgKG1heC13aWR0aDo0ODBweCkge1xyXG4gICAgLmJnIHtcclxuICAgICAgICByaWdodDogYXV0bztcclxuICAgIH1cclxuXHJcblxyXG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>.flow{
+    
+    height: 10rem;
+    width: 100%;
+   
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.about{
+   display: block;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 5rem;
+    background-image: url(http://localhost:3000/static/media/cta-bg.dc498e0e3a8a00f24aec.webp);
+    background-size:cover;
+    background-position:cover;
+    height: auto;
+    z-index: -1;
+    position: relative;
+    
+}
+.image {
+    display:block;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 100%;
+    height: auto;
+   
+  }
+.subflow{
+    background-image: url(http://localhost:3000/static/media/cta-bg.dc498e0e3a8a00f24aec.webp);
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    border: 3px solid grey;
+    border-radius: 10px;
+    display:flexbox;
+    align-items:flex-start;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 2rem 2rem;
+    padding: 1rem;
+}
+
+
+
+.glb{
+    position: absolute;
+    z-index: -1;
+    right:14;
+    top:auto;
+    /* padding-left: -2rem; */
+    object-fit: fill;
+    height: 6vh;
+    width: -moz-fit-content;
+    width: fit-content;
+    
+}
+.h1{
+
+    font-size: 3.5rem;
+    font-weight:700 ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+
+.h2{
+   
+    font-size: 2.5rem;
+    font-weight:700 ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+.h3{
+   
+    font-size: 1.5rem;
+    font-weight:500 ;
+  
+    width: 100vm;
+    /* max-width: 75rem; */
+    overflow: hidden;
+    position: relative;
+
+}
+.h4{
+
+    font-size: 1.5rem;
+    font-weight:300 ;
+
+}
+
+
+
+@media  screen and (max-width:840px) {
+    .bg {
+        right: auto;
+    }
+
+    .introContent{
+        font-size: auto;
+    }
+    .h2{
+        font-size: 2.5rem;
+
+    }
+    .h1{
+        font-size:3.5rem;
+    }
+
+    .h3{
+        font-size: 1.5rem;
+    }
+
+}
+@media  screen and (max-width:480px) {
+    .bg {
+        right: auto;
+    }
+
+
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0Fib3V0L2Fib3V0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSxhQUFhO0lBQ2IsV0FBVzs7SUFFWCxjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsdUJBQXVCOzs7QUFHM0I7O0FBRUE7R0FDRyxjQUFjO0lBQ2IsdUJBQXVCO0lBQ3ZCLHFCQUFxQjtJQUNyQixtQkFBbUI7SUFDbkIsV0FBVztJQUNYLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIseURBQStDO0lBQy9DLHFCQUFxQjtJQUNyQix5QkFBeUI7SUFDekIsWUFBWTtJQUNaLFdBQVc7SUFDWCxrQkFBa0I7O0FBRXRCO0FBQ0E7SUFDSSxhQUFhO0lBQ2IsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsWUFBWTs7RUFFZDtBQUNGO0lBQ0kseURBQStDO0lBQy9DLHNCQUFzQjtJQUN0QiwyQkFBMkI7SUFDM0IsWUFBWTtJQUNaLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsc0JBQXNCO0lBQ3RCLG1CQUFtQjtJQUNuQixlQUFlO0lBQ2Ysc0JBQXNCO0lBQ3RCLGtCQUFrQjtJQUNsQix1QkFBdUI7SUFDdkIsbUJBQW1CO0lBQ25CLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsYUFBYTtBQUNqQjs7OztBQUlBO0lBQ0ksa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxRQUFRO0lBQ1IsUUFBUTtJQUNSLHlCQUF5QjtJQUN6QixnQkFBZ0I7SUFDaEIsV0FBVztJQUNYLHVCQUFrQjtJQUFsQixrQkFBa0I7O0FBRXRCO0FBQ0E7O0lBRUksaUJBQWlCO0lBQ2pCLGdCQUFnQjtJQUNoQix5REFBeUQ7QUFDN0Q7OztBQUdBOztJQUVJLGlCQUFpQjtJQUNqQixnQkFBZ0I7SUFDaEIseURBQXlEO0FBQzdEO0FBQ0E7O0lBRUksaUJBQWlCO0lBQ2pCLGdCQUFnQjs7SUFFaEIsWUFBWTtJQUNaLHNCQUFzQjtJQUN0QixnQkFBZ0I7SUFDaEIsa0JBQWtCOztBQUV0QjtBQUNBOztJQUVJLGlCQUFpQjtJQUNqQixnQkFBZ0I7O0FBRXBCOzs7O0FBSUE7SUFDSTtRQUNJLFdBQVc7SUFDZjs7SUFFQTtRQUNJLGVBQWU7SUFDbkI7SUFDQTtRQUNJLGlCQUFpQjs7SUFFckI7SUFDQTtRQUNJLGdCQUFnQjtJQUNwQjs7SUFFQTtRQUNJLGlCQUFpQjtJQUNyQjs7QUFFSjtBQUNBO0lBQ0k7UUFDSSxXQUFXO0lBQ2Y7OztBQUdKIiwic291cmNlc0NvbnRlbnQiOlsiLmZsb3d7XHJcbiAgICBcclxuICAgIGhlaWdodDogMTByZW07XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgXHJcbiAgICBtYXJnaW46IDAgYXV0bztcclxuICAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcblxyXG5cclxufVxyXG5cclxuLmFib3V0e1xyXG4gICBkaXNwbGF5OiBibG9jaztcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDByZW07XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDVyZW07XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uL2RhdGEvY3RhLWJnLndlYnAnKTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTpjb3ZlcjtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246Y292ZXI7XHJcbiAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICB6LWluZGV4OiAtMTtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIFxyXG59XHJcbi5pbWFnZSB7XHJcbiAgICBkaXNwbGF5OmJsb2NrO1xyXG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87XHJcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87IFxyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IGF1dG87XHJcbiAgIFxyXG4gIH1cclxuLnN1YmZsb3d7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uL2RhdGEvY3RhLWJnLndlYnAnKTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICB6LWluZGV4OiAtMTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGJvcmRlcjogM3B4IHNvbGlkIGdyZXk7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgZGlzcGxheTpmbGV4Ym94O1xyXG4gICAgYWxpZ24taXRlbXM6ZmxleC1zdGFydDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIG1hcmdpbjogMnJlbSAycmVtO1xyXG4gICAgcGFkZGluZzogMXJlbTtcclxufVxyXG5cclxuXHJcblxyXG4uZ2xie1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgei1pbmRleDogLTE7XHJcbiAgICByaWdodDoxNDtcclxuICAgIHRvcDphdXRvO1xyXG4gICAgLyogcGFkZGluZy1sZWZ0OiAtMnJlbTsgKi9cclxuICAgIG9iamVjdC1maXQ6IGZpbGw7XHJcbiAgICBoZWlnaHQ6IDZ2aDtcclxuICAgIHdpZHRoOiBmaXQtY29udGVudDtcclxuICAgIFxyXG59XHJcbi5oMXtcclxuXHJcbiAgICBmb250LXNpemU6IDMuNXJlbTtcclxuICAgIGZvbnQtd2VpZ2h0OjcwMCA7XHJcbiAgICBmb250LWZhbWlseTogc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQ7XHJcbn1cclxuXHJcblxyXG4uaDJ7XHJcbiAgIFxyXG4gICAgZm9udC1zaXplOiAyLjVyZW07XHJcbiAgICBmb250LXdlaWdodDo3MDAgO1xyXG4gICAgZm9udC1mYW1pbHk6IHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250O1xyXG59XHJcbi5oM3tcclxuICAgXHJcbiAgICBmb250LXNpemU6IDEuNXJlbTtcclxuICAgIGZvbnQtd2VpZ2h0OjUwMCA7XHJcbiAgXHJcbiAgICB3aWR0aDogMTAwdm07XHJcbiAgICAvKiBtYXgtd2lkdGg6IDc1cmVtOyAqL1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHJcbn1cclxuLmg0e1xyXG5cclxuICAgIGZvbnQtc2l6ZTogMS41cmVtO1xyXG4gICAgZm9udC13ZWlnaHQ6MzAwIDtcclxuXHJcbn1cclxuXHJcblxyXG5cclxuQG1lZGlhICBzY3JlZW4gYW5kIChtYXgtd2lkdGg6ODQwcHgpIHtcclxuICAgIC5iZyB7XHJcbiAgICAgICAgcmlnaHQ6IGF1dG87XHJcbiAgICB9XHJcblxyXG4gICAgLmludHJvQ29udGVudHtcclxuICAgICAgICBmb250LXNpemU6IGF1dG87XHJcbiAgICB9XHJcbiAgICAuaDJ7XHJcbiAgICAgICAgZm9udC1zaXplOiAyLjVyZW07XHJcblxyXG4gICAgfVxyXG4gICAgLmgxe1xyXG4gICAgICAgIGZvbnQtc2l6ZTozLjVyZW07XHJcbiAgICB9XHJcblxyXG4gICAgLmgze1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMS41cmVtO1xyXG4gICAgfVxyXG5cclxufVxyXG5AbWVkaWEgIHNjcmVlbiBhbmQgKG1heC13aWR0aDo0ODBweCkge1xyXG4gICAgLmJnIHtcclxuICAgICAgICByaWdodDogYXV0bztcclxuICAgIH1cclxuXHJcblxyXG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>#contactUs{
+
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    display: flex; 
+    /* flex-wrap: wrap;     */
+    align-items: center;
+    justify-content: center;
+    background-image: url(http://localhost:3000/static/media/cta-bg.dc498e0e3a8a00f24aec.webp);
+    background-size: cover;
+    background-position:cover;
+    height: auto;
+    /* z-index: -1;  */
+    position: relative;
+      
+
+}
+.image{
+
+    height: 20rem;
+    width: auto;
+    
+}
+.h1{
+    font-size: 3rem;
+    margin-bottom: 1 rem
+    ;
+}
+
+
+
+.contactform{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vm;
+    max-width: 60rem;
+}
+.name,.email,.msg{
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(40,40,40);
+}
+.submit{
+    background: white;
+    border: none;
+  
+    margin: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2.5rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0NvbnRhY3QvY29udGFjdC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksV0FBVztJQUNYLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLHlCQUF5QjtJQUN6QixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLHlEQUErQztJQUMvQyxzQkFBc0I7SUFDdEIseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsa0JBQWtCOzs7QUFHdEI7QUFDQTs7SUFFSSxhQUFhO0lBQ2IsV0FBVzs7QUFFZjtBQUNBO0lBQ0ksZUFBZTtJQUNmO0lBQ0E7QUFDSjs7OztBQUlBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYixzQkFBc0I7SUFDdEIsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixXQUFXO0lBQ1gsZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsV0FBVztJQUNYLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2Ysb0JBQW9CO0lBQ3BCLFlBQVk7SUFDWixZQUFZO0lBQ1oscUJBQXFCO0lBQ3JCLHlCQUF5QjtBQUM3QjtBQUNBO0lBQ0ksaUJBQWlCO0lBQ2pCLFlBQVk7O0lBRVosWUFBWTtJQUNaLHFCQUFxQjtJQUNyQix1QkFBdUI7QUFDM0IiLCJzb3VyY2VzQ29udGVudCI6WyIjY29udGFjdFVze1xyXG5cclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWF4LXdpZHRoOiAxMDAlO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZGlzcGxheTogZmxleDsgXHJcbiAgICAvKiBmbGV4LXdyYXA6IHdyYXA7ICAgICAqL1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi9kYXRhL2N0YS1iZy53ZWJwJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjpjb3ZlcjtcclxuICAgIGhlaWdodDogYXV0bztcclxuICAgIC8qIHotaW5kZXg6IC0xOyAgKi9cclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgICAgXHJcblxyXG59XHJcbi5pbWFnZXtcclxuXHJcbiAgICBoZWlnaHQ6IDIwcmVtO1xyXG4gICAgd2lkdGg6IGF1dG87XHJcbiAgICBcclxufVxyXG4uaDF7XHJcbiAgICBmb250LXNpemU6IDNyZW07XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxIHJlbVxyXG4gICAgO1xyXG59XHJcblxyXG5cclxuXHJcbi5jb250YWN0Zm9ybXtcclxuICAgIG1hcmdpbjogMXJlbTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgd2lkdGg6IDkwdm07XHJcbiAgICBtYXgtd2lkdGg6IDYwcmVtO1xyXG59XHJcbi5uYW1lLC5lbWFpbCwubXNne1xyXG4gICAgZm9udC1zaXplOiBtZWRpdW07XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1heC13aWR0aDogNDByZW07XHJcbiAgICBtYXJnaW46IDAuMjVyZW07XHJcbiAgICBwYWRkaW5nOiAwLjVyZW0gMXJlbTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDAuNXJlbTtcclxuICAgIGJhY2tncm91bmQ6IHJnYig0MCw0MCw0MCk7XHJcbn1cclxuLnN1Ym1pdHtcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gIFxyXG4gICAgbWFyZ2luOiAycmVtO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMC41cmVtO1xyXG4gICAgcGFkZGluZzogMC43NXJlbSAyLjVyZW07XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>.footer{
+    width: 100vw;
+    height: 2rem;
+    background: rgb(40,40,40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: small;
+}
+
+.h3{
+   
+ font-size: 2rem;
+    padding: 1rem 0.5rem;
+    font-weight: 400;
+}
+
+.h4{
+    
+ font-size: 1rem;
+    line-height: 2rem;
+    padding: 2rem 1rem;
+    font-weight: 200;
+
+
+}
+.footermenu{
+  display: flex;
+  width: 100%;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-content: center;
+ 
+}
+.list{
+    width: 35%;
+    padding: 2rem 2rem;
+    display:table-column;
+    justify-content: center;
+   
+
+}
+.app {
+  background-image: url(http://localhost:3000/static/media/cta-bg.dc498e0e3a8a00f24aec.webp);
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  z-index: -1;
+  position: absolute;
+
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0Zvb3Rlci9mb290ZXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtJQUNaLFlBQVk7SUFDWix5QkFBeUI7SUFDekIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtBQUNwQjs7QUFFQTs7Q0FFQyxlQUFlO0lBQ1osb0JBQW9CO0lBQ3BCLGdCQUFnQjtBQUNwQjs7QUFFQTs7Q0FFQyxlQUFlO0lBQ1osaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixnQkFBZ0I7OztBQUdwQjtBQUNBO0VBQ0UsYUFBYTtFQUNiLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsdUJBQXVCO0VBQ3ZCLHFCQUFxQjs7QUFFdkI7QUFDQTtJQUNJLFVBQVU7SUFDVixrQkFBa0I7SUFDbEIsb0JBQW9CO0lBQ3BCLHVCQUF1Qjs7O0FBRzNCO0FBQ0E7RUFDRSx5REFBK0M7RUFDL0Msc0JBQXNCO0VBQ3RCLDJCQUEyQjtFQUMzQixZQUFZO0VBQ1osV0FBVztFQUNYLGtCQUFrQjs7QUFFcEIiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9vdGVye1xyXG4gICAgd2lkdGg6IDEwMHZ3O1xyXG4gICAgaGVpZ2h0OiAycmVtO1xyXG4gICAgYmFja2dyb3VuZDogcmdiKDQwLDQwLDQwKTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBmb250LXdlaWdodDogMzAwO1xyXG4gICAgZm9udC1zaXplOiBzbWFsbDtcclxufVxyXG5cclxuLmgze1xyXG4gICBcclxuIGZvbnQtc2l6ZTogMnJlbTtcclxuICAgIHBhZGRpbmc6IDFyZW0gMC41cmVtO1xyXG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcclxufVxyXG5cclxuLmg0e1xyXG4gICAgXHJcbiBmb250LXNpemU6IDFyZW07XHJcbiAgICBsaW5lLWhlaWdodDogMnJlbTtcclxuICAgIHBhZGRpbmc6IDJyZW0gMXJlbTtcclxuICAgIGZvbnQtd2VpZ2h0OiAyMDA7XHJcblxyXG5cclxufVxyXG4uZm9vdGVybWVudXtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHBhZGRpbmc6IDJyZW0gMXJlbTtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBhbGlnbi1jb250ZW50OiBjZW50ZXI7XHJcbiBcclxufVxyXG4ubGlzdHtcclxuICAgIHdpZHRoOiAzNSU7XHJcbiAgICBwYWRkaW5nOiAycmVtIDJyZW07XHJcbiAgICBkaXNwbGF5OnRhYmxlLWNvbHVtbjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICBcclxuXHJcbn1cclxuLmFwcCB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi9kYXRhL2N0YS1iZy53ZWJwJyk7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XHJcbiAgaGVpZ2h0OiBhdXRvO1xyXG4gIHotaW5kZXg6IC0xO1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuXHJcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>#hire{
+
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(http://localhost:3000/static/media/group-266.9b5c53d3da7338e283f4.webp);
+    background-size: cover;
+    background-position: cover;
+    height: 100vh;
+    /* z-index: -1;  */
+    position: relative;
+}
+.h1{
+    font-size: 3rem;
+    margin-bottom: 1 rem
+    ;
+}
+.clientsetails{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.clientImages{
+    margin: 1rem 0;
+    display: flex;
+
+
+}
+.clientImage{
+    object-fit: cover;
+    width: 23%;
+    min-width: 9rem;
+    margin: auto;
+    padding: 0.25rem;
+
+}
+#clients{
+    padding: 2rem;
+}
+.contactdetails{
+    padding: 1rem;
+    font-size: medium;
+    font-weight: 300;
+
+}
+.contactform{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vm;
+    max-width: 60rem;
+}
+.name,.email,.msg{
+    font-size: medium;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(40,40,40);
+}
+.submit{
+    background: white;
+    border: none;
+  
+    margin: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.75rem 3.5rem;
+}
+.links{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.link{
+    object-fit: cover;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.25rem;
+    margin: 0 0.75rem;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0hpcmUvaGlyZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksWUFBWTtJQUNaLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIseURBQWtEO0lBQ2xELHNCQUFzQjtJQUN0QiwwQkFBMEI7SUFDMUIsYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixrQkFBa0I7QUFDdEI7QUFDQTtJQUNJLGVBQWU7SUFDZjtJQUNBO0FBQ0o7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixlQUFlO0FBQ25CO0FBQ0E7SUFDSSxjQUFjO0lBQ2QsYUFBYTs7O0FBR2pCO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsVUFBVTtJQUNWLGVBQWU7SUFDZixZQUFZO0lBQ1osZ0JBQWdCOztBQUVwQjtBQUNBO0lBQ0ksYUFBYTtBQUNqQjtBQUNBO0lBQ0ksYUFBYTtJQUNiLGlCQUFpQjtJQUNqQixnQkFBZ0I7O0FBRXBCO0FBQ0E7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLHNCQUFzQjtJQUN0QixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLFdBQVc7SUFDWCxnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLGlCQUFpQjtJQUNqQixXQUFXO0lBQ1gsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixvQkFBb0I7SUFDcEIsWUFBWTtJQUNaLFlBQVk7SUFDWixxQkFBcUI7SUFDckIseUJBQXlCO0FBQzdCO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsWUFBWTs7SUFFWixZQUFZO0lBQ1oscUJBQXFCO0lBQ3JCLHVCQUF1QjtBQUMzQjtBQUNBO0lBQ0ksYUFBYTtJQUNiLGVBQWU7O0FBRW5CO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIsWUFBWTtJQUNaLFdBQVc7SUFDWCxzQkFBc0I7SUFDdEIsaUJBQWlCO0FBQ3JCIiwic291cmNlc0NvbnRlbnQiOlsiI2hpcmV7XHJcblxyXG4gICAgd2lkdGg6IDEwMHZ3O1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi9kYXRhL2dyb3VwLTI2Ni53ZWJwJyk7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY292ZXI7XHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG4gICAgLyogei1pbmRleDogLTE7ICAqL1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcbi5oMXtcclxuICAgIGZvbnQtc2l6ZTogM3JlbTtcclxuICAgIG1hcmdpbi1ib3R0b206IDEgcmVtXHJcbiAgICA7XHJcbn1cclxuLmNsaWVudHNldGFpbHN7XHJcbiAgICBmb250LXdlaWdodDogMzAwO1xyXG4gICAgZm9udC1zaXplOiAxcmVtO1xyXG59XHJcbi5jbGllbnRJbWFnZXN7XHJcbiAgICBtYXJnaW46IDFyZW0gMDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcblxyXG5cclxufVxyXG4uY2xpZW50SW1hZ2V7XHJcbiAgICBvYmplY3QtZml0OiBjb3ZlcjtcclxuICAgIHdpZHRoOiAyMyU7XHJcbiAgICBtaW4td2lkdGg6IDlyZW07XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbiAgICBwYWRkaW5nOiAwLjI1cmVtO1xyXG5cclxufVxyXG4jY2xpZW50c3tcclxuICAgIHBhZGRpbmc6IDJyZW07XHJcbn1cclxuLmNvbnRhY3RkZXRhaWxze1xyXG4gICAgcGFkZGluZzogMXJlbTtcclxuICAgIGZvbnQtc2l6ZTogbWVkaXVtO1xyXG4gICAgZm9udC13ZWlnaHQ6IDMwMDtcclxuXHJcbn1cclxuLmNvbnRhY3Rmb3Jte1xyXG4gICAgbWFyZ2luOiAxcmVtO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICB3aWR0aDogOTB2bTtcclxuICAgIG1heC13aWR0aDogNjByZW07XHJcbn1cclxuLm5hbWUsLmVtYWlsLC5tc2d7XHJcbiAgICBmb250LXNpemU6IG1lZGl1bTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWF4LXdpZHRoOiA0MHJlbTtcclxuICAgIG1hcmdpbjogMC4yNXJlbTtcclxuICAgIHBhZGRpbmc6IDAuNXJlbSAxcmVtO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMC41cmVtO1xyXG4gICAgYmFja2dyb3VuZDogcmdiKDQwLDQwLDQwKTtcclxufVxyXG4uc3VibWl0e1xyXG4gICAgYmFja2dyb3VuZDogd2hpdGU7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgXHJcbiAgICBtYXJnaW46IDJyZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiAwLjVyZW07XHJcbiAgICBwYWRkaW5nOiAwLjc1cmVtIDMuNXJlbTtcclxufVxyXG4ubGlua3N7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC13cmFwOiB3cmFwO1xyXG5cclxufVxyXG4ubGlua3tcclxuICAgIG9iamVjdC1maXQ6IGNvdmVyO1xyXG4gICAgaGVpZ2h0OiAycmVtO1xyXG4gICAgd2lkdGg6IDJyZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiAwLjI1cmVtO1xyXG4gICAgbWFyZ2luOiAwIDAuNzVyZW07XHJcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div><nav class="navbar"><img src="./Shailka_files/cropped-logo.2b0c47eca1104d84d10c.png" alt="logo" class="logo"><div class="desktopmenu"><a class="desktopMenuListItems">Home</a><a class="desktopMenuListItems">About US</a><a class="desktopMenuListItems">Contact US</a><a class="desktopMenuListItems active">Hire a Talent</a></div></nav><div><section id="intro" class="app"><div class="introContent"><span class="h2">Welcome to</span><br><span class="h1">Shailka Systems</span><br><span class="h2">Hire your dream team of engineers <br> in just one week.</span><br><span class="introtext">While you focus on building your product, we’ll take care of the talent hunting for you.<br>Hire from a strong network of top talents from India, for the world.</span></div><img src="./Shailka_files/311506-P8G2XL-229-1.5a7834c3af18ddff051d.png" alt="profile" class="bg"></section></div><section id="about" class="about"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Introducing Shailka Systems: </span><br><br><div class="h2">Your Premier IT Talent Hunt and Recruitment Platform</div><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Our Vision &amp; Mission</span><br><span class="introtext">Our values show the type of high-quality service you will get from us.</span><br><img src="./Shailka_files/vision.c5e1016386ce2107c17a.png" alt="vgn" class="image"><br><span class="h2">Welcome to the future of meaningful, sustainable work</span><br><span class="introtext">We believe that the sum is greater than our parts - our impact can be seen globally. We specialize in helping our highly-skilled, global technology talent community in emerging markets, connect with hundreds of leading companies.</span><br><img src="./Shailka_files/handshake-icon-graphic-an54g0vbppswmf14.3b6a7ba246bf97d4d153.png" alt="handshake" class="image"><div class="flow"><div class="subflow"><span class="h3">5 Days</span><br><span class="h4">Hiring process</span></div><div class="subflow"><span class="h3">Top 3.5%</span><br><span class="h4">Talent Vatted</span></div><div class="subflow"><span class="h3">Upto 40%</span><br><span class="h4">Cost Advantage</span></div><div class="subflow"><span class="h3">5+ TIme </span><br><span class="h4">Zone Availability</span></div></div><span class="h2">Ready to start a conversation?</span><br><span class="introtext">Let’s explore how we can accelerate and de-risk your cloud modernization together.</span><br><br><a class="contactus">  <button class="button">GET IN TOUCH</button><br><br></a><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Global Elite Talent Network</span><br><br><span class="introtext">Explore our pool of 5000+ top pre-vetted technology specialists equipped with cutting-edge technologies. All timezones covered.</span><br><br><img src="./Shailka_files/istockphoto-1244666924-612x612.a5f9f890392ff967e953.jpg" alt="globa;" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Front End Developer</span><br><br><span class="introtext">We have skilled PHP developers for startups who are looking to build their MVP &amp; React, Vue.js &amp; Angular developers for growing organisations.</span><br><br><img src="./Shailka_files/front-end-development-logos-hd-png-download.9c0cb2051be80922db6f.png" alt="frontend" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Backend Developer</span><br><br><span class="introtext">We have specialists in full-stack and back-end development, with expertise in Rust, Go Lang, Node.JS, Java, Scala, Python, or C++.</span><br><br><img src="./Shailka_files/backend.3c2f27a6039a7dc6dda9.png" alt="backend" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Blockchain Developers</span><br><br><span class="introtext">We have pre-vetted experts with skill sets in Web assembly, Web3, Rust, Solidity, Ethereum, Hyperledger, Polygon, and Chainlink protocols.</span><br><br><img src="./Shailka_files/Core-Blockchain-Developer.334af037ac33c97c556a.png" alt="blockchain" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Mobile Developers</span><br><br><span class="introtext">Build top-notch cross-platform mobile applications for iOS &amp; Android using Flutter, React Native or Ionic framework along with iOS &amp; Android native development if required</span><br><br><img src="./Shailka_files/mobile-mobile.4603e339cad90ab9420d.png" alt="mobile" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">IoT &amp; Edge computing Experts</span><br><br><span class="introtext">Hire professionals expert in building prototype devices on top of Beagleboard, Raspberry Pi, Arduino &amp; Intel edge computing devices. Our drone makers have expertise with DIY as well as PX4 ecosystems.</span><br><br><img src="./Shailka_files/IoT_devices_at_the_edge__depicting_the_volume_of_data_generated_and_.709aa0da043d6df96b0e.png" alt="IOT" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Salesforce Developers</span><br><br><span class="introtext">We have pre-vetted salesforce developers with expertise in APEX &amp; Javascript</span><br><br><img src="./Shailka_files/saleforce.c1b0651bd1362f519b33.png" alt="salesforce" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">SAP Developers</span><br><br><span class="introtext">We have pre-vetted SAP developers with expertise in ABAP &amp; wide array of SAP modules</span><br><br><img src="./Shailka_files/SAP develpper.ee7aa5e6c2d9b7874c48.png" alt="sapdev" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Cloud &amp; DevOps Engineers</span><br><br><span class="introtext">Our DevOps engineers are highly skilled in CNCF tools (Docker, Kubernetes), certified in AWS, GCP, and Azure, proficient in shell scripting, and adept at creating command-line utilities using GoLang.</span><br><br><img src="./Shailka_files/DEVOPS.c80017f1028e967d9d68.png" alt="devops" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Graphic Designers &amp; Video Editing experts</span><br><br><span class="introtext">Expert team in Photoshop, Illustrator, InDesign, video editing (Final Cut Pro, Adobe Premiere, Filmora, DaVinci Resolve), audio mixing, and stunning digital art.</span><br><br><img src="./Shailka_files/graphic-designer-and-video-editing.61bf56c38615a9f8f7a3.png" alt="graphics" class="image"><br><br><span class="h2">We are prepared to meet your talent needs.</span><br><br><span class="introtext">Join our global community of technologists and discover new opportunities for growth and collaboration.</span><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Matching speed</span><br><br><span class="introtext">Our team can help you move faster without sacrificing quality. We can radically reduce the time it takes to hire talent, so you can find the right fit quickly.</span><br><br><img src="./Shailka_files/matching-speed-modified.ebc6dd3b082999f035b5.webp" alt="matching" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Enterprise-Ready</span><br><br><span class="introtext">Our technologists have verified backgrounds, work in your time zone, and comply with your company’s security practices. This means you can focus on making an impact, while we take care of the rest.</span><br><br><img src="./Shailka_files/enterprise_ready.10cec8b19b34254da07b.jpg" alt="entrprise" class="image"><br><br><img src="./Shailka_files/heading-bg.637917ed01f88c65c98c.webp" alt="global" class="glb"><span class="h3">Flexible teams</span><br><br><span class="introtext">Find niche expertise for various project lengths. Onboard solo engineers to fill gaps, or hire full teams to accelerate your build. Get any technology, any time zone, any skill.</span><br><br><img src="./Shailka_files/flexible-staff-modified.1b261fa85b720746f68d.webp" alt="flexibleteam" class="image"><br><br><span class="h2">Take the First Step Towards Growth</span><br><br><span class="introtext">Take the First Step Towards Growth and Let’s explore how we can accelerate and de-risk your tech modernisation efforts together.</span><br><br><img src="./Shailka_files/first step.b8a48c77e20e684a5b3e.png" alt="firststep" class="image"></section><section id="contactUs"><div id="Contact"><img src="./Shailka_files/get-in-touch-1.15b3910fc3673c7ea397.webp" alt="getintouch" class="image"><form class="contactform"><input type="text" class="name" placeholder="Your Name" name="your_name"><input type="email" class="email" placeholder="Your Email" name="your_email"><textarea class="msg" name="message" cols="30" rows="10" placeholder="Your Message"></textarea><button type="submit" class="submit">Submit</button><br></form></div></section><section id="hire"><div id="Contact"><h1 class="h1">Hire Talent with Shailka System</h1><br><form class="contactform"><input type="text" class="name" placeholder="Your Name" name="your_name"><input type="text" class="name" placeholder="Name of the organisation" name="org_name"><input type="email" class="email" placeholder="Your Email" name="your_email"><textarea class="msg" name="jd" cols="30" rows="10" placeholder="JOb Discription"></textarea><textarea class="msg" name="message" cols="30" rows="10" placeholder="Your Message"></textarea><button type="submit" class="submit">Submit</button></form></div></section><div class="app"><div class="footermenu"><div class="list"><span class="h2">Shailka Systems</span><div class="h3"><br><a href="https://www.linkedin.com/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE2SURBVHgB7ZbhUcMwDIXlHgOECWo26AhhEroB3SBlBCYANoAJGiagTJBs0GwgnonNFZ3S9hK5f9rvTmdbuvbZjmzLkYCZPRninGvVAIQeYTu2p4FVUqzi/Kx+VxwFGzSe8tJhe28d99+sEcEa9hkn8UB2+BvF2WIm92mACbVoKjJipvjexPiVDNEE52LsyRBtS5fYxm+071HshQwZSppcqEkTqPf6BWxxwB98H7Au+ks6lNlhheKANiK+TAHhL2Hrgf9csH5rzWc0EhydGrYeiG3RPGux0YKJuJpSCdVkLcj9pfwF26C/EeGtuSBY7fXDN03JFba1I0vBeJwK4S6O/W7KCj2NYHLSXAUvT/Dsr0UqonZ0whmaSChd7tKWPlF+/pcu4anhvmi1JjxTf1egk9PgzKX+Dz+KsVV6lsSZAAAAAElFTkSuQmCC" alt="LinkedIn" class="link"></a><a href="https://twitter.com/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAF8SURBVHgBvZaNcYMwDIXtTMAGzSb1CBmBTlBG6AbNBrAB2cDdgHYCs0GywatcaHEd/8hA++50vgNZny0kbCkKBaCiwZqQUo7iL0QQRdaSGdzLPuvJarFVFOSZ7Aq+zCowTTqSaazXYGOUwAy2y2ShO8J4UEyp2Fs6BqtRLltQLdkZvzPjF1oTAppAsDPistmovBgNphYyfizO7vT87iUCPEYydcLUl76U6xRyGLxi0qF3BZ+mTaXzflUL2AZsEsA+Esu4TiENPpAjpH8Y1feqQ7rCKwomMKWHQ2KuhbUlUPI9cZyqzKoUF5pJJ6zPgc60G41jIs7j7JOD1TSohMvoOneZXfapdGGqg9wxdvna4TynS6zsjexjHkMwRYPty1zaL/5Ef4UaibbAcgvg6KcHpRPANvNrIPZI9i6Wb2B3osiOgq8nqoNOBFatsb+iv8H/P4B3hhoU3mu2nP6aDfPANcp2ayu9EVs1g3vEL8ItmCeLFCvkpOvG+e25+gQ86yyinWl47wAAAABJRU5ErkJggg==" alt="Twitter" class="link"></a><a href="https://www.instagram.com/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGUSURBVHgBtVbtcYQgEEUn/+N1QAmmA9JBOtBUEFNBroOkg7tUkHSAqUA7ODo4O9jsCjjoIHievpk37MD6lo8FN2EeAECGjUBSy9kyKMM2SZIu6IkBcqSE+/GD5HNBCuQVtkUxDcJhH9DEczeQhG1w8fTJ4eBhG1RGT3jGsrmBOdBWNKB3YHSek6O4TL57SRemb4t8xrQ9IJ+QvU19JqVJ/MO0bx7NfkVHCOMcmwX5RDSOaURD4cxLR7ACfUckcug3Pm1sNqEVCcev8Yw3zrhYu6IOZ1obkRKb3ONDL0llVkW+s09PKJC7FUXATzi2YisCZY4deiQfl/iFAnHH/gv4fTt2zlYEymwy4P5/MX9W0S/hTIbxzdYEInxagy4qNq/IGvmLfDd9FqegEsQvbFhAa5wiGn16q4hOCfrtEp4AwtylMqKhHlg4oyw4UqIo+dJZ2V98xpZBJaDrgyvbF4fUFBI12w/1UKyALkq2rhcs+CgsdpSwLWjipXeNoIsUCfdDgluUIJKZgJQg5MjZbQVkNzoTB//rrWPFNs7kXAAAAABJRU5ErkJggg==" alt="Instagram" class="link"></a><a href="https://www.facebook.com/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADjSURBVHgB7ZaNCcIwEIUv0gG6gXECHUE3cAM7go7gBOoGdQM3qKNkhG4Q32nFI9hKyA9C++A4cmn42t47iCLIWrtHKimNjFKqLgCpsDhRQoFRzpA1pdcTlEUFheuGuCJaUasQu5igDRp9d4voiXZBIb/u8A3Sp5AvquWCnUUvY3FexgLxbLQCopEaGnBwLNdp+jEm2ez9l6BafbSQG+w+sadQuoSAfDTPBdJuwcfeJWy8fi/ksHYztIoF2nbBMgjZJ4Y0Q4fHbe8JNAJQS+llCkz4GZPNMO1x0H05gzj2PcsXyAfQxTX4Dhw5FwAAAABJRU5ErkJggg==" alt="Facebook" class="link"></a><a href="mailto:sumit@shailka.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHmSURBVEhL7ZRNq0FBGMf/pGywEFlLWZGQD0DeIvkCyoKVkq0PoFhYWWJjr+yRjYWXJJHwIaxlY+7M3Dnd63Ic9+bebvKr0zHPzPideWaeUREK/hC1eP8ZL+HDeX7h1bKo1WrY7Xai9TPsdjsKhYJofXBVGAqF0O/34Xa74fV6RfQ+2IcOh0P4/X4MBgMR/QQTfiUYDBKbzUZ0Oh2hk0VUmdVqRcxmM7FYLIQKRfQc2T3MZrM8JbFYDOPxWETlWa/XCAQCSCaTV1MpcfPQlEol5HI5RKNRTKdTEb1EkiUSCdTrdahUKtFzieIprVQqyGQyiEQimM1mIvrBZrPhsng8jkajcVPGuKssqtUq0uk0wuEw5vO5iALb7ZbLWAaazSbUauW/u0tI9xrH4xGHw4GfYCaVZPv9HlqtVnFlEopCJmOHoN1uYzKZIJVKwefzweFwcDlLc6fTQT6f52MVYUf1K6wsyuUyOZ1OhMqI0WgkdFWil5DlcnnWXiwWfAwby2Bz5cpCI7wX0D4Ui0W0Wi30ej1+CUg4nU7x6x2Xy4Vutwv6odBoNDCZTKLnCu/ec9gKrVYr0ev1ZDQaiagytF6JwWDgc+VWePNq83g8/PkONL18X+Wutv9xef8md9XhI3kJH86zC4E35o26cMqBeZ8AAAAASUVORK5CYII=" alt="Email" class="link"></a></div></div><div class="list"><span class="h3">Company</span> <br><br><span class="h4">Book a free consultation</span><br><span class="h4">About Us</span><br><span class="h4">Blog</span><br><span class="h4">Press Release</span><br></div><div class="list"><span class="h3">   Get Involved</span><br><br><span class="h4">Contact Us</span><br><span class="h4">Partner with us</span><br><span class="h4">Privacy Policy</span><br><span class="h4">Terms and Conditions</span><br></div><div class="list"><span class="h3">Resourses</span><br><br><span class="h4">Talent FAQ</span><br><span class="h4">Vendor FAQ</span><br><span class="h4">Trust Center</span><br></div><br><br></div><span class="footer">@ 2023 Shailka, All right reserved.</span></div></div></div>
+  
+
+</body></html>
