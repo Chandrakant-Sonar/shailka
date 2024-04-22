@@ -32,9 +32,10 @@ const Apply = () => {
             </div>
             <div className="content">
                 <div className="cont">
-                    <div className="btn">
+                <div className="btn">
                         <button className='btn1'><p>APPLY FOR JOB</p></button>
-                        <button className='btn1'><p>SCHEDULE A MEETING</p></button>
+                       
+                        <a href="https://calendly.com/chandrakant-sonar" className='btn1'><p> SCHEDULE A MEETING</p></a>
                     </div>
                     <div className="contact1">
                         <span className="h44">Reach Out On:</span>

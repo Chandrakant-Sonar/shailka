@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import './contact.css';
 import getInTouchImage from "../../data/get-in-touch-1-2048x742.webp";
 import emailjs from 'emailjs-com';
-// import getInTouchBanner from '../../data/get-in-touch-1.webp';
 
 const Contact = () => {
     const form = useRef();
@@ -11,10 +10,10 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs
-        .sendForm('service_t1d1brw', 'template_cdij0ug', form.current,'Z8hw7juR3ri5Jjq0W')
+            .sendForm('service_t1d1brw', 'template_cdij0ug', form.current, 'Z8hw7juR3ri5Jjq0W')
             .then((result) => {
                 console.log(result.text);
-                alert('Email sent successfully');
+                alert('Thanks for submitting. We will get back to you soon.');
                 e.target.reset();
             })
             .catch((error) => {
@@ -25,13 +24,14 @@ const Contact = () => {
     return (
         <div>
             <div className="get">
-                <img src={getInTouchImage} alt="" className='getin' />
+                <img src={getInTouchImage} alt="Get in touch" className='getin' />
             </div>
             <div className="content">
                 <div className="cont">
                     <div className="btn">
                         <button className='btn1'><p>APPLY FOR JOB</p></button>
-                        <button className='btn1'><p>SCHEDULE A MEETING</p></button>
+                       
+                        <a href="https://calendly.com/chandrakant-sonar" className='btn1'><p> SCHEDULE A MEETING</p></a>
                     </div>
                     <div className="contact1">
                         <span className="h44">Reach Out On:</span>
@@ -47,31 +47,31 @@ const Contact = () => {
                 <div className="form">
                     <section id='contactUs'>
                         <div id="Contact">
-                                <form className="contactform" ref={form} onSubmit={sendEmail}>
+                            <form className="contactform" ref={form} onSubmit={sendEmail}>
                                 <div className="name1">
-                                <label className='aa'>Name</label>
-                                <input type="text" className='name' placeholder='Chandrakant Sonar' name='your_name' />
-                                </div>    
-                               <div className="name1">
-                               <label className='aa'>Email ID</label>
-                                <input type="email" className='email' placeholder='chandrakant@shailka.com' name='your_email' />
+                                    <label>Name</label>
+                                    <input type="text" className='name' placeholder='Chandrakant Sonar' name='your_name' />
                                 </div>
                                 <div className="name1">
-                               <label className='aa'>Role/Skills you are looking for?</label>
-                                <input type="email" className='email' placeholder='eg. Python, React, Golang,etc' name='role' />
+                                    <label>Email ID</label>
+                                    <input type="email" className='email' placeholder='chandrakant@shailka.com' name='your_email' />
                                 </div>
                                 <div className="name1">
-                               <label className='aa'>Message</label>
-                                <textarea className="msg" name="message" cols="30" rows="6" placeholder='Your Message'></textarea>
+                                    <label>Role/Skills you are looking for?</label>
+                                    <input type="text" className='name' placeholder='eg. Python, React, Golang, etc.' name='role' />
                                 </div>
                                 <div className="name1">
-                               <label className='aa'>Job Disription's URL</label>
-                                <textarea className="msg" name="jd" cols="30" rows="6" placeholder='job Discription'></textarea>
+                                    <label>Message</label>
+                                    <textarea className="msg" name="message" cols="30" rows="6" placeholder='Your Message'></textarea>
+                                </div>
+                                <div className="name1">
+                                    <label>Job Description's URL</label>
+                                    <textarea className="msg" name="jd" cols="30" rows="6" placeholder='Job Description'></textarea>
                                 </div>
                                 <button type='submit' className='submit1'>Submit</button><br />
                             </form>
                         </div>
-                    </section>  
+                    </section>
                 </div>
             </div>
         </div>
@@ -79,4 +79,3 @@ const Contact = () => {
 }
 
 export default Contact;
-

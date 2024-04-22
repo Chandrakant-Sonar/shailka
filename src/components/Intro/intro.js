@@ -13,9 +13,18 @@ import linkedin from '../../data/linkedin-logo.jpeg';
 import instagram from '../../data/instagram-logo.jpeg';
 import twitter from '../../data/twitter-logo.jpeg';
 import email from '../../data/Mail-logo.jpeg';
+import Carousel from '../Carousel/carousel';
 
 
 const Intro = () => {
+  const images = [
+    "src/data/amazonwebservices-original-wordmark.svg",
+    'src/data/argocd-original-wordmark.svg',
+    "src/data/311506-P8G2XL-229-1.png"
+   
+    // Add more image URLs as needed
+  ];
+
   return (
     <div id='intro123'>
     <section id='intro' className='app'>
@@ -196,7 +205,7 @@ const Intro = () => {
     <span className="h2">Top Skills You Can Hire</span><br /><br />
    </div>
    <div className="hero">
-        <span className="introrext">carousel</span>
+   <Carousel images={images} />
     </div>
     <div className="fstep">
        
