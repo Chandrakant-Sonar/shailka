@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shailka/static/css/main.804bca55.css",
-    "main.js": "/shailka/static/js/main.7621db22.js",
+    "main.css": "/shailka/static/css/main.15efca7d.css",
+    "main.js": "/shailka/static/js/main.e838a1f5.js",
     "static/media/How-it-Works-1920-├ù-1080px-2-3.svg": "/shailka/static/media/How-it-Works-1920-├ù-1080px-2-3.ac6b3deec826cc464c4e486951579e18.svg",
     "static/media/How-it-Works-1920-├ù-1080px-1.svg": "/shailka/static/media/How-it-Works-1920-├ù-1080px-1.d9178f2aa00b170ec3bf07cc2889c65f.svg",
     "static/media/group-266.webp": "/shailka/static/media/group-266.9b5c53d3da7338e283f4.webp",
@@ -21,11 +21,11 @@
     "static/media/banner-about.webp": "/shailka/static/media/banner-about.1fba6bd49b613fca2d3d.webp",
     "static/media/frond-dev.webp": "/shailka/static/media/frond-dev.442086749cf937c235b8.webp",
     "index.html": "/shailka/index.html",
-    "main.804bca55.css.map": "/shailka/static/css/main.804bca55.css.map",
-    "main.7621db22.js.map": "/shailka/static/js/main.7621db22.js.map"
+    "main.15efca7d.css.map": "/shailka/static/css/main.15efca7d.css.map",
+    "main.e838a1f5.js.map": "/shailka/static/js/main.e838a1f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.804bca55.css",
-    "static/js/main.7621db22.js"
+    "static/css/main.15efca7d.css",
+    "static/js/main.e838a1f5.js"
   ]
 }
