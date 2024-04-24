@@ -1,5 +1,6 @@
 import React from 'react'
 import './about.css'
+import { Link } from 'react-router-dom';
 import banner from "../../data/banner-about.webp"
 import bg from '../../data/311506-P8G2XL-229-1.png';
 import linkedin from '../../data/linkedin-logo.jpeg';
@@ -12,7 +13,7 @@ import vision from "../../data/How-it-Works-1920-├ù-1080px-1.svg"
 import why from "../../data/How-it-Works-1920-├ù-1080px-2-3.svg"
 import ft from "../../data/footer-cta.webp"
 
-const About = () => {
+const About = ({ handleClick }) => {
     return (
       <div>
     
@@ -50,14 +51,19 @@ const About = () => {
 <img src={bg} alt="profile"  className='bg'/>    
 </div> 
 </div>
-<div id='intro' className='app'>
+<div id='intro' className='app2'>
 <div className="fimg">
         <img src={ft} alt="profile"  className='vision'/>    
         </div> 
         <div className='introContent1'>
            <span className='h3'>Ready to start a conversation?</span>
             <p className='h4'>Let us in on what you’re seeking, and we’ll be right here to assist</p>
-            <button className="button">GET IN TOUCH</button>
+            
+            <Link to="/contact">
+        <button className='getintouch' onClick={() => handleClick('contact')}>GET IN TOUCH</button>
+      </Link>
+
+
         </div>
        
     </div>
@@ -84,16 +90,21 @@ const About = () => {
  </div>
  <div className="list">
      <span className='h3'>Company</span> <br /><br />
-     <span className='h4'>Book a free consultation</span><br />
-     <span className='h4'>About Us</span><br />
+     <Link to="/contact">
+        <span className='h4' onClick={() => handleClick('contact')}>Book a free consultation</span><br />
+      </Link>
+     <span className="h4">About Us</span><br />
      <span className='h4'>Blog</span><br />
      <span className='h4'>Press Release</span><br />
 
    </div>
  <div className="list">
-   <span className="h3">   Get Involved</span><br /><br />
+   <span className="h3">Get Involved</span><br /><br />
   
-   <span className="h4">Contact Us</span><br />
+   <Link to="/contact">
+        <span className='h4' onClick={() => handleClick('contact')}>Contact Us</span><br />
+      </Link>
+
    <span className="h4">Partner with us</span><br />
    <span className="h4">Privacy Policy</span><br />
    <span className="h4">Terms and Conditions</span><br />

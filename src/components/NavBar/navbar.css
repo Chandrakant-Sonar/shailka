@@ -2,12 +2,13 @@
     position: fixed;
     top: 0;
     width: 100%;
+    
     display: flex;
     justify-content: center;
-    justify-content: space-between; 
+    /* justify-content: space-between;  */
     justify-content:space-around;
     align-items:center;
-    padding: 2px;
+    /* padding: 2px; */
     background-image: url(../../data/group-266.webp);
     background-size: cover;
     background-color: #ffffff;

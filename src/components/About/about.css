@@ -1,43 +1,68 @@
 
-.introContent{
+.introContent {
     height: 60vh;
     width: 100%;
-    /* padding: 2rem; */
-
- 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-   
     margin-left: 10rem;
 }
 
-.introContent1{
+.introContent1 {
     height: 60vh;
     width: 100vw;
     padding: 2rem;
-    
- 
     display: flex;
     flex-direction: column;
-    /* justify-content: right; */
-    align-items:flex-end;
+    align-items: flex-end;
+}
+.footerimg{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    z-index: 1111111111;
 }
 
-.button{
+.button {
     height: 3rem;
     width: 10rem;
-    
     color: white;
     text-align: center;
     background-color: black;
-    border: 2px solid yellow ;
-    border-radius: 3rem; 
-
-
-    
+    border: 2px solid yellow;
+    border-radius: 3rem;
+   
 }
+
+.getintouch {
+    height: 3rem;
+    width: 10rem;
+    border: 2px solid black;
+    border-radius: 5%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 3rem;
+    margin-left: 1rem;
+   
+}
+
+.getintouch:hover {
+    cursor: pointer;
+    height: 3rem;
+    width: 10rem;
+    border: 3px solid white;
+    border-radius: 5%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 3rem;
+    margin-left: 1rem;
+    
+
+}
+  
 .bg{
     position: absolute;
     z-index: -1;
@@ -50,7 +75,7 @@
 }
 .fimg{
     position: absolute;
-    z-index: -1;
+    z-index: -11;
    
     /* top: 1rem; */
     object-fit: cover;
@@ -60,7 +85,7 @@
 }
 .banner{
     position: absolute;
-    z-index: -1;
+    z-index: -11;
    
     /* top: 1rem; */
     object-fit: cover;
@@ -70,7 +95,7 @@
 }
 .app {
     width: 100%;
-    z-index: -1;
+   
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -80,6 +105,24 @@
     height: auto;
     position: relative;
     height: auto;
+   
+   
+  }
+  .app2 {
+    width: 100%;
+    height: auto;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: center; */
+    
+    overflow: hidden;
+   
+    height: auto;
+    position: relative;
+    height: auto;
+   
    
   }
 .h1{
@@ -115,6 +158,17 @@ color: white;
 color: white;
     font-size: 1.5rem;
     font-weight:300 ;
+
+}
+.h4{
+    color: black;
+    font-size: 1rem;
+    /* font-weight:500 ; */
+    font: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    /* overflow: hidden;
+    position: relative; */
+    text-decoration:none;
 
 }
 .footer{
@@ -197,6 +251,7 @@ color: white;
    
     overflow: hidden;
     position: relative;
+    
  
 
 }

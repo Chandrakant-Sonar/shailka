@@ -1,30 +1,25 @@
-import React from 'react'
+import React from 'react';
 import './intro.css';
 import bg from '../../data/311506-P8G2XL-229-1.png';
 import glb from '../../data/heading-bg.webp';
-import slogo from "../../data/frond-dev.webp"
-import img from "../../data/matching-speed-modified.webp"
-import img2 from "../../data/enterprise-ready-modified.webp"
-import img3 from "../../data/flexible-staff-modified.webp"
-import work1 from "../../data/1-2.png"
-import img4 from "../../data/cta-img-277x300.webp"
+import slogo from "../../data/frond-dev.webp";
+import img from "../../data/matching-speed-modified.webp";
+import img2 from "../../data/enterprise-ready-modified.webp";
+import img3 from "../../data/flexible-staff-modified.webp";
+import work1 from "../../data/1-2.png";
+import img4 from "../../data/cta-img-277x300.webp";
 import linkedin from '../../data/linkedin-logo.jpeg';
-// import facebook from '../../data/facebook-logo.jpeg';
 import instagram from '../../data/instagram-logo.jpeg';
 import twitter from '../../data/twitter-logo.jpeg';
 import email from '../../data/Mail-logo.jpeg';
-import Carousel from '../Carousel/carousel';
+// import { Link } from 'react-scroll';
+import MyCarousel from '../Carousel/MyCarousel'; 
+// import Contact from '../Contact/contact';
+import { Link } from 'react-router-dom';
 
 
-const Intro = () => {
-  const images = [
-    "src/data/amazonwebservices-original-wordmark.svg",
-    'src/data/argocd-original-wordmark.svg',
-    "src/data/311506-P8G2XL-229-1.png"
-   
-    // Add more image URLs as needed
-  ];
-
+const Intro = ({ handleClick }) => {
+ 
   return (
     <div id='intro123'>
     <section id='intro' className='app'>
@@ -204,16 +199,22 @@ const Intro = () => {
    <img src={glb} alt="global" className='glb1'/> 
     <span className="h2">Top Skills You Can Hire</span><br /><br />
    </div>
-   <div className="hero">
-   <Carousel images={images} />
-    </div>
+   <div className="carousel">
+       <MyCarousel/>
+      </div>
     <div className="fstep">
        
        <div className="fstep2">
          <p className="h3">Take the First Step Towards Growth</p>
          <p className="h4">Take the First Step Towards Growth and Let’s explore how we can accelerate and de-risk your tech modernisation efforts together.</p>
-       <button className="getintouch">GET IN TOUCH</button>
        
+       <Link to="/contact">
+        <button className='getintouch' onClick={() => handleClick('contact')}>GET IN TOUCH</button>
+      </Link>
+
+
+      
+
        </div>
        <div className="img">
          <img src={img4} alt="" className='stepimg'/>
@@ -237,15 +238,25 @@ const Intro = () => {
         </div>
         <div className="list">
             <span className='h3'>Company</span> <br /><br />
-            <span className='h4'>Book a free consultation</span><br />
-            <span className='h4'>About Us</span><br />
+            <Link to="/contact">
+        <span className='h4' onClick={() => handleClick('contact')}>Book a free consultation</span><br />
+      </Link>
+          
+        <span className='h4' >About Us</span><br />
+    
+
             <span className='h4'>Blog</span><br />
             <span className='h4'>Press Release</span><br />
 
           </div>
         <div className="list">
           <span className="h3">   Get Involved</span><br /><br />
-          <span className="h4">Contact Us</span><br />
+        
+          <Link to="/contact">
+        <span className='h4' onClick={() => handleClick('contact')}>Contact Us</span><br />
+      </Link>
+
+         
           <span className="h4">Partner with us</span><br />
           <span className="h4">Privacy Policy</span><br />
           <span className="h4">Terms and Conditions</span><br />
