@@ -17,7 +17,7 @@ const About = ({ handleClick }) => {
     return (
       <div>
     
-      <section id='intro1' className='app'>
+      <section id='intro1' className='app2'>
 
         <div className='introContent'>
             <span className='h22'>Best in class consulting,<br /> IT Solutions & Services</span><br/>
