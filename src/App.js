@@ -21,8 +21,10 @@ function App() {
         {activeLink === 'about' && <About handleClick={() => handleClick('contact','about')}/>}
         {activeLink === 'contact' && <Contact />}
         {activeLink === 'apply' && <Apply />} 
+
       </div>
-    </Router>
+      <footer/>
+          </Router>
   );
 }
 

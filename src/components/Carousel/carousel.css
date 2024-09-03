@@ -1,20 +1,25 @@
-.MyCarousel {
-
-  position: relative;
-  text-align: center;
-  width: 100%;
-  max-width: 30%;
- 
-  height: 300px; 
+.carousel .slider-wrapper {
+  overflow: visible;
 }
 
-.carousel-root {
+.carousel .slider {
+  overflow: visible;
+}
 
-  position: relative;
- 
-  margin-top: 20px; 
-  width: 20%; 
-  height: 30%;
-  text-align: center;
-  
-} 
+.carousel .slide {
+  transform: scale(0.8);
+  transition: transform 0.5s ease;
+}
+
+.carousel .slide.selected {
+  transform: scale(1.5);
+}
+
+.carousel .slide img {
+  width: 30%;
+  height: 15rem;
+}
+
+.carousel .control-arrow {
+  opacity: 0.5;
+}

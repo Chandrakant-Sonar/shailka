@@ -25,6 +25,8 @@
     padding: 2rem 2rem;
     display:table-column;
     justify-content: center;
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the text color from the parent */
    
 
 }
@@ -40,8 +42,8 @@
  
 
 }
-.h3{
-  color: black;
+.h2222{
+  color: rgb(130, 1, 1);
 font-size: 2rem;
    padding: 1rem 0.5rem;
    font-weight: 400;
@@ -55,4 +57,13 @@ font-size: 1rem;
    font-weight: 200;
 
 
+}
+.list a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Inherits the text color from the parent */
+}
+
+.list a:hover {
+  text-decoration: underline; /* Optional: Adds underline on hover */
+  color: blue; /* Optional: Changes color on hover */
 }

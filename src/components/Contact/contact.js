@@ -49,24 +49,24 @@ const Contact = () => {
                         <div id="Contact">
                             <form className="contactform" ref={form} onSubmit={sendEmail}>
                                 <div className="name1">
-                                    <label>Name</label>
+                                    <label className='aa'>Name</label>
                                     <input type="text" className='name' placeholder='Chandrakant Sonar' name='your_name' />
                                 </div>
                                 <div className="name1">
-                                    <label>Email ID</label>
+                                    <label className='aa'>Email ID</label>
                                     <input type="email" className='email' placeholder='chandrakant@shailka.com' name='your_email' />
                                 </div>
                                 <div className="name1">
-                                    <label>Role/Skills you are looking for?</label>
+                                    <label className='aa'>Role/Skills you are looking for?</label>
                                     <input type="text" className='name' placeholder='eg. Python, React, Golang, etc.' name='role' />
                                 </div>
                                 <div className="name1">
-                                    <label>Message</label>
+                                    <label className='aa'>Message</label>
                                     <textarea className="msg" name="message" cols="30" rows="6" placeholder='Your Message'></textarea>
                                 </div>
                                 <div className="name1">
-                                    <label>Job Description's URL</label>
-                                    <textarea className="msg" name="jd" cols="30" rows="6" placeholder='Job Description'></textarea>
+                                    <label className='aa'>Job Description's URL</label>
+                                    <textarea className="msg" name="jd" cols="30" rows="2" placeholder="Job Description's URL"></textarea>
                                 </div>
                                 <button type='submit' className='submit1'>Submit</button><br />
                             </form>

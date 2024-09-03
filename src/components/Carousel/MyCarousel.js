@@ -32,10 +32,18 @@ class MyCarousel extends React.Component {
 
   render() {
     return (
-      <Carousel autoPlay infiniteLoop>
+      <Carousel
+        autoPlay
+        infiniteLoop
+        showThumbs={false}
+        showIndicators={false}
+        showStatus={false}
+        centerMode
+        centerSlidePercentage={25}
+      >
         {this.state.images.map((post, index) => (
-          <div key={index}>
-            <img src={post} />
+          <div key={index} className="carousel-slide">
+            <img src={post} alt={`Slide ${index + 1}`} />
           </div>
         ))}
       </Carousel>

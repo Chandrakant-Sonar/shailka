@@ -31,7 +31,7 @@ const Apply = () => {
                 <img src={getInTouchImage} alt="" className='getin' />
             </div>
             <div className="content">
-                <div className="cont">
+                <div className="cont1">
                 <div className="btn">
                         <button className='btn1'><p>APPLY FOR JOB</p></button>
                        
@@ -54,15 +54,15 @@ const Apply = () => {
                                 <form className="contactform" ref={form} onSubmit={sendEmail}>
                                 <div className="name1">
                                 <label className='aa'>Name</label>
-                                <input type="text" className='name' placeholder='Chandrakant Sonaar' name='your_name' />
+                                <input type="text" className='name' placeholder='Chandrakant Sonar' name='your_name' />
                                 </div>    
-                               <div className="name1">
-                               <label className='aa'>Email ID</label>
+                                <div className="name1">
+                                <label className='aa'>Email ID</label>
                                 <input type="email" className='email' placeholder='chandrakant@shailka.com' name='your_email' />
                                 </div>
                                 
                                 <div className="name1">
-                               <label className='aa'>Skills</label>
+                                <label className='aa'>Skills</label>
                                 <textarea className="msg" name="message" cols="30" rows="6" placeholder='Describe your skills'></textarea>
                                 </div>
                                 

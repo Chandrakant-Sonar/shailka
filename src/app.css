@@ -1,9 +1,10 @@
 .app {
     background-image: url('../../shailka/src/data/group-266.webp');
-    background-size: cover;
+    background-size: cover; /* This ensures the image covers the entire container */
     background-position: center;
-    height: 100vh;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Ensures the width of the element is 100% of the viewport */
+    height: 100vh; /* Keeps the height to the full height of the viewport */
     z-index: -1;
-    position: absolute;
-   
+    position: absolute; /* Keeps the background positioned properly */
 }
